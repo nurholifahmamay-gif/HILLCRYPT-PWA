@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#092b48">
+  <meta name="description" content="HILLCRYPT — Platform Pembelajaran Kriptografi Matriks">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="HILLCRYPT">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/hillcrypt-192.png">
+  <link rel="apple-touch-icon" href="icons/hillcrypt-192.png">
+  <title>HILLCRYPT</title>
+  <style>
+    :root { color-scheme: dark; --navy:#092b48; --cyan:#31d5ee; }
+    * { box-sizing:border-box; }
+    html, body { margin:0; width:100%; height:100%; overflow:hidden; background:#071b30; font-family:Arial,Helvetica,sans-serif; }
+    .topbar { height:52px; display:flex; align-items:center; gap:11px; padding:0 15px; color:#fff; background:linear-gradient(100deg,#061b31,#0b3b5c); border-bottom:1px solid rgba(49,213,238,.35); }
+    .logo { width:30px; height:30px; border-radius:8px; display:grid; place-items:center; color:#071b30; background:linear-gradient(135deg,#53e5f2,#1684a9); font-weight:900; font-size:19px; }
+    .brand { font-weight:800; letter-spacing:2px; font-size:15px; }
+    .sub { color:#a9d5e5; font-size:10px; letter-spacing:1px; margin-top:2px; }
+    main { height:calc(100dvh - 52px); width:100%; background:#eef4fa; }
+    iframe { display:block; width:100%; height:100%; border:0; background:#eef4fa; }
+    @media (max-width:600px) { .topbar{height:46px;padding:0 12px}.logo{width:27px;height:27px}.brand{font-size:14px}main{height:calc(100dvh - 46px)} }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo" aria-hidden="true">H</div>
+    <div><div class="brand">HILLCRYPT</div><div class="sub">PLATFORM KRIPTOGRAFI MATRIKS</div></div>
+  </header>
+  <main>
+    <iframe src="https://hillcrypt-mamay.streamlit.app/?embed=true" title="HILLCRYPT v4.2" allow="clipboard-read; clipboard-write; fullscreen" loading="eager"></iframe>
+  </main>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
+    }
+  </script>
+</body>
+</html>
